@@ -1,22 +1,22 @@
 #! /bin/bash
 
-if [ $(id -u) != 0 ]; then
-    echo "Please run as root"
-    exit 1
-fi    
+set -e
 
-# variables
+##
+# Install packages
+##
 pacman_packages=(
     android-tools minicom openocd ctags
     ripgrep fd docker openssl wget curl 
-    git rofi vim 
+    git rofi vim cmake ctags tig 
 )
 
 pacman_args="--needed --noconfirm"
 
-
-# update packages
 sudo pacman -Syyu ${pacman_args}
-
-# install packages
 sudo pacman -Sy ${pacman_args} ${pacman_all[*]}
+
+##
+# Install dotfiles
+##
+rsync -avr --exclude '.git' --exclude 'install.sh' . ~
