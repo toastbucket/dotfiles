@@ -9,7 +9,7 @@ pacman_packages=(
     android-tools minicom openocd ctags
     ripgrep fd docker openssl wget curl
     git rofi vim cmake ctags tig zathura
-    cargo
+    cargo firefox
 )
 
 pacman_args="--needed --noconfirm"
