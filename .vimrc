@@ -93,7 +93,7 @@ let g:fzf_layout = { 'down': '~15%' }
 let g:fzf_history_dir = '~/.local/share/fzf-history'
 
 "
-" FZF conlors
+" FZF colors
 "
 let g:fzf_colors = {
   \ 'fg':      ['fg', 'Number'],
@@ -122,6 +122,15 @@ let g:gutentags_auto_add_gtags_cscope = 0
 let g:gutentags_cache_dir = expand('~/.cache/tags')
 let g:gutentags_ctags_auto_set_tags = 1
 let g:gutentags_plus_nomap = 1
+
+"
+" install vim-plug
+"
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 
 call plug#begin('~/.vim/plugged')
 
