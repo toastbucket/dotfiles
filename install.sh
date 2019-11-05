@@ -28,4 +28,7 @@ rsync -avr --exclude '.git' --exclude 'install.sh' . ~
 sudo systemctl enable docker
 
 sudo groupadd docker
+sudo groupadd dialout
+
 sudo usermod -aG docker ${USER}
+sudo usermod -aG dialout ${USER}
