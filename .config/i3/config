@@ -333,3 +333,6 @@ mode "$mode_gaps_outer" {
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
+
+# Setup system
+exec_always --no-startup-id xrdb ~/.Xresources
