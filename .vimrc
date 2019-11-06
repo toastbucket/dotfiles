@@ -20,8 +20,6 @@ set stal=2
 set listchars=tab:\|-,nbsp:_,space:_
 set list
 
-colorscheme maxcolors
-
 filetype plugin indent on
 
 "
@@ -144,5 +142,12 @@ Plug 'ludovicchabant/vim-gutentags'
 Plug 'skywind3000/gutentags_plus'
 Plug 'vim-scripts/seetab'
 Plug 'shougo/echodoc.vim'
+Plug 'dracula/vim', {'as':'dracula'}
 
 call plug#end()
+
+"
+" Set theme
+"
+syntax on
+colorscheme dracula
