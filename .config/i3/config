@@ -35,6 +35,9 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec terminal
 
+# start a terminal in current location
+bindsym $mod+Shift+Return exec terminal -cd $(cat /tmp/whereami)
+
 # kill focused window
 bindsym $mod+Shift+q kill
 

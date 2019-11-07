@@ -132,3 +132,6 @@ fi
 
 # Use VIM with ranger
 VISUAL=vim; export VISUAL EDITOR=vim; export EDITOR
+
+# Store last directory
+export PROMPT_COMMAND="pwd > /tmp/whereami"
