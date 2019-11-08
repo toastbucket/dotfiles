@@ -5,6 +5,7 @@ set mouse=a
 set clipboard=unnamedplus,autoselectplus
 set ttyfast
 set t_Co=256
+set completeopt=menuone
 
 set noshowmode
 set novisualbell
@@ -78,8 +79,8 @@ let g:ycm_use_clangd = 1
 let g:ycm_clangd_uses_ycmd_caching = 1
 let g:ycm_clangd_args = ['--background-index', '--all-scopes-completion', '--suggest-missing-includes']
 
-let g:ycm_key_list_select_completion = []
-let g:ycm_key_list_previous_completion = []
+" let g:ycm_key_list_select_completion = []
+" let g:ycm_key_list_previous_completion = []
 
 "
 " FZF options
@@ -142,7 +143,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'ycm-core/youcompleteme', {'do': 'TERM=xterm ./install.py --clangd-completer ' }
+Plug 'ycm-core/youcompleteme', {'do': 'TERM=xterm ./install.py --clangd-completer --java-completer' }
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'skywind3000/gutentags_plus'
 Plug 'vim-scripts/seetab'
