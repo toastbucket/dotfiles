@@ -122,6 +122,11 @@ let g:gutentags_ctags_auto_set_tags = 1
 let g:gutentags_plus_nomap = 1
 
 "
+" autocommands
+"
+au bufread,bufnewfile *.aidl set ft=java
+
+"
 " install vim-plug
 "
 if empty(glob('~/.vim/autoload/plug.vim'))
