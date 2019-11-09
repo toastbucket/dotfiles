@@ -13,7 +13,7 @@ pacman_packages=(
 )
 
 pacman_uninstall=(
-    rust
+    lightdm rust
 )
 
 pacman_args="--needed --noconfirm"
