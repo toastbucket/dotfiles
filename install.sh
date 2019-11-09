@@ -9,13 +9,20 @@ pacman_packages=(
     android-tools minicom openocd ctags
     ripgrep fd docker openssl wget curl
     git rofi vim cmake ctags tig zathura
-    cargo firefox
+    firefox
+)
+
+pacman_uninstall=(
+    rust
 )
 
 pacman_args="--needed --noconfirm"
 
 sudo pacman -Syyu ${pacman_args}
 sudo pacman -Sy ${pacman_args} ${pacman_packages[*]}
+sudo pacman -Rcn ${pacman_args} ${pacman_uninstall[*]}
+
+curl https://sh.rustup.rs -sSf | sh
 
 ##
 # Install dotfiles
