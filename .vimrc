@@ -157,3 +157,4 @@ call plug#end()
 "
 syntax on
 colorscheme dracula
+hi Normal guibg=NONE ctermbg=NONE
