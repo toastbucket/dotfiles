@@ -13,14 +13,14 @@ pacman_packages=(
 )
 
 pacman_uninstall=(
-    lightdm rust
+    lightdm palemoon-bin
 )
 
 pacman_args="--needed --noconfirm"
 
 sudo pacman -Syyu ${pacman_args}
 sudo pacman -Sy ${pacman_args} ${pacman_packages[*]}
-sudo pacman -Rcn ${pacman_args} ${pacman_uninstall[*]}
+sudo pacman -Rcn --noconfirm ${pacman_uninstall[*]}
 
 curl https://sh.rustup.rs -sSf | sh
 
