@@ -336,3 +336,4 @@ mode "$mode_gaps_outer" {
 
 # Setup system
 exec_always --no-startup-id xrdb ~/.Xresources
+exec_always --no-startup-id ~/.screenlayout/layout.sh
