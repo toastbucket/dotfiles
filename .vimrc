@@ -128,6 +128,21 @@ let g:gutentags_plus_nomap = 1
 au bufread,bufnewfile *.aidl set ft=java
 
 "
+" functions
+"
+let t:is_transparent = 0
+function! Toggle_transparent()
+	if t:is_transparent == 0
+		hi Normal guibg=NONE ctermbg=NONE
+		let t:is_transparent = 1
+	else
+		set background=dark
+		let t:is_transparent = 0
+	endif
+endfunction
+nnoremap <C-a> : call Toggle_transparent()<CR>
+
+"
 " install vim-plug
 "
 if empty(glob('~/.vim/autoload/plug.vim'))
@@ -157,4 +172,4 @@ call plug#end()
 "
 syntax on
 colorscheme dracula
-hi Normal guibg=NONE ctermbg=NONE
+call Toggle_transparent()
