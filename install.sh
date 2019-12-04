@@ -6,10 +6,11 @@ set -e
 # Install and remove packages
 ##
 pacman_packages=(
-    android-tools minicom openocd ctags
-    ripgrep fd docker openssl wget curl
-    git rofi vim cmake ctags tig zathura
-    firefox udevil gnome-calculator unzip
+    android-tools android-udev minicom
+    openocd ctags ripgrep fd docker openssl
+    wget curl git rofi vim cmake ctags tig
+    zathura firefox udevil gnome-calculator
+    unzip
 )
 
 pacman_uninstall=(
