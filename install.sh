@@ -10,7 +10,7 @@ pacman_packages=(
     openocd ctags ripgrep fd docker openssl
     wget curl git rofi vim cmake ctags tig
     zathura firefox udevil gnome-calculator
-    unzip
+    unzip autorandr
 )
 
 pacman_uninstall=(
