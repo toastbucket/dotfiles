@@ -12,6 +12,11 @@ esac
 if [ -e /usr/share/git/completion/git-prompt.sh ]; then
     source /usr/share/git/completion/git-prompt.sh
 fi
+
+if [ -e /usr/share/git-core/contrib/completion/git-prompt.sh ]; then
+	source /usr/share/git-core/contrib/completion/git-prompt.sh
+fi
+
 GIT_PS1_SHOWDIRTYSTATE=YES
 GIT_PS1_SHOWUNTRACKEDFILES=YES
 GIT_PS1_SHOWSTASHSTATE=YES
