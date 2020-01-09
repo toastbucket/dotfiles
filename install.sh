@@ -8,13 +8,13 @@ set -e
 pacman_packages=(
     android-tools android-udev minicom
     openocd ctags ripgrep fd docker openssl
-    wget curl git rofi vim cmake ctags tig
+    wget curl git rofi gvim cmake ctags tig
     zathura firefox udevil gnome-calculator
     unzip autorandr
 )
 
 pacman_uninstall=(
-    lightdm palemoon-bin
+    lightdm palemoon-bin vim
 )
 
 pacman_args="--needed --noconfirm"
