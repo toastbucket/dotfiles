@@ -6,6 +6,7 @@ set clipboard=unnamedplus,autoselectplus
 set ttyfast
 set t_Co=256
 set completeopt=menuone
+set updatetime=100
 
 set noshowmode
 set novisualbell
@@ -164,6 +165,7 @@ Plug 'skywind3000/gutentags_plus'
 Plug 'vim-scripts/seetab'
 Plug 'shougo/echodoc.vim'
 Plug 'dracula/vim', {'as':'dracula'}
+Plug 'airblade/vim-gitgutter'
 
 call plug#end()
 
