@@ -159,9 +159,9 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-" Plug 'ycm-core/youcompleteme', {'do': 'TERM=xterm ./install.py --clangd-completer --java-completer' }
-Plug 'ludovicchabant/vim-gutentags'
-Plug 'skywind3000/gutentags_plus'
+"Plug 'ycm-core/youcompleteme', {'do': 'TERM=xterm ./install.py --clangd-completer --java-completer' }
+"Plug 'ludovicchabant/vim-gutentags'
+"Plug 'skywind3000/gutentags_plus'
 Plug 'vim-scripts/seetab'
 Plug 'shougo/echodoc.vim'
 Plug 'dracula/vim', {'as':'dracula'}
