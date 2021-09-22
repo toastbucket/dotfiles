@@ -7,7 +7,7 @@ pacman_packages=(
     openocd ctags ripgrep fd docker openssl
     wget curl git rofi gvim cmake ctags tig
     zathura udevil gnome-calculator zsh
-    unzip autorandr
+    unzip autorandr libreoffice diff-so-fancy
 )
 
 pacman_uninstall=(
