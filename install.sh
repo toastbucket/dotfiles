@@ -9,7 +9,7 @@ pacman_packages=(
     android-tools android-udev minicom
     openocd ctags ripgrep fd docker openssl
     wget curl git rofi gvim cmake ctags tig
-    zathura firefox udevil gnome-calculator
+    zathura udevil gnome-calculator
     unzip autorandr
 )
 
