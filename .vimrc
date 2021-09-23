@@ -21,6 +21,7 @@ set stal=2
 
 set listchars=tab:\|-,nbsp:_,space:_
 set list
+set bg=dark
 
 filetype plugin indent on
 
@@ -124,6 +125,12 @@ let g:gutentags_ctags_auto_set_tags = 1
 let g:gutentags_plus_nomap = 1
 
 "
+" gruvbox options
+"
+let g:gruvbox_contrast_dark = 'soft'
+let g:gruvbox_transparent_bg = '1'
+
+"
 " autocommands
 "
 au bufread,bufnewfile *.aidl set ft=java
@@ -166,6 +173,7 @@ Plug 'vim-scripts/seetab'
 Plug 'shougo/echodoc.vim'
 Plug 'dracula/vim', {'as':'dracula'}
 Plug 'airblade/vim-gitgutter'
+Plug 'morhetz/gruvbox'
 
 call plug#end()
 
@@ -173,5 +181,4 @@ call plug#end()
 " Set theme
 "
 syntax on
-colorscheme dracula
-call Toggle_transparent()
+autocmd vimenter * ++nested colorscheme gruvbox
