@@ -107,6 +107,14 @@ source $ZSH/oh-my-zsh.sh
 
 alias rerc='source ~/.zshrc'
 
+fg() {
+    if [[ $# -eq 1 && $1 = - ]]; then
+        builtin fg %-
+    else
+        builtin fg %"$@"
+    fi
+}
+
 fvim() {
     if [ ! -z $1 ];then
         local filepath=$(fzf -q $1)
