@@ -27,10 +27,10 @@ font pango:monospace 9
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec terminal
+bindsym $mod+Return exec alacritty
 
 # start a terminal in current location
-bindsym $mod+Shift+Return exec terminal -cd $(cat /tmp/whereami)
+bindsym $mod+Shift+Return exec alacritty --working-directory $(cat /tmp/whereami)
 
 # kill focused window
 bindsym $mod+Shift+q kill
