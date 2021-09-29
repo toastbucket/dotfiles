@@ -8,7 +8,7 @@ pacman_packages=(
     wget curl git rofi gvim cmake ctags tig
     zathura udevil gnome-calculator zsh
     unzip autorandr libreoffice diff-so-fancy
-    repo alacritty
+    repo alacritty pulseaudio
 )
 
 pacman_uninstall=(
