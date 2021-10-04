@@ -108,6 +108,7 @@ source $ZSH/oh-my-zsh.sh
 export GIT_EDITOR=vim
 
 alias rerc='source ~/.zshrc'
+alias ccat='highlight -O ansi'
 
 fg() {
     if [[ $# -eq 1 && $1 = - ]]; then
