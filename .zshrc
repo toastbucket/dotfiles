@@ -105,6 +105,8 @@ source $ZSH/oh-my-zsh.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+export GIT_EDITOR=vim
+
 alias rerc='source ~/.zshrc'
 
 fg() {
