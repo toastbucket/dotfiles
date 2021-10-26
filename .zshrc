@@ -106,6 +106,7 @@ source $ZSH/oh-my-zsh.sh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 export GIT_EDITOR=vim
+export PROMPT_COMMAND="pwd > /tmp/whereami"
 
 alias rerc='source ~/.zshrc'
 alias ccat='highlight -O ansi'
@@ -126,5 +127,13 @@ fvim() {
     fi
 
     [[ -n "$filepath" ]] && ${EDITOR:-vim} "${filepath}"
+}
+
+precmd() {
+    eval "$PROMPT_COMMAND"
+}
+
+whereami() {
+    cat /tmp/whereami
 }
 
