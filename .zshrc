@@ -119,16 +119,6 @@ fg() {
     fi
 }
 
-fvim() {
-    if [ ! -z $1 ];then
-        local filepath=$(fzf -q $1)
-    else
-        local filepath=$(fzf)
-    fi
-
-    [[ -n "$filepath" ]] && ${EDITOR:-vim} "${filepath}"
-}
-
 precmd() {
     eval "$PROMPT_COMMAND"
 }
