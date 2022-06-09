@@ -150,6 +150,18 @@ function! Toggle_transparent()
 endfunction
 nnoremap <C-a> : call Toggle_transparent()<CR>
 
+let t:is_rnu = 0
+function! Toggle_relativeNumbers()
+	if t:is_rnu == 0
+		set relativenumber
+		let t:is_rnu = 1
+	else
+		set norelativenumber
+		let t:is_rnu = 0
+	endif
+endfunction
+nnoremap <C-n> : call Toggle_relativeNumbers()<CR>
+
 "
 " install vim-plug
 "
