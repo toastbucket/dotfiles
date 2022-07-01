@@ -40,6 +40,9 @@ bindsym $mod+Shift+q kill
 # Instead start rofi
 bindsym $mod+d exec rofi -show run
 
+# screenshot
+bindsym $mod+p exec flameshot gui
+
 # start ranger floating
 bindsym $mod+b exec alacritty -t ranger-float -e ranger
 for_window [title="ranger-float"] floating enable, resize set 1024 520, move position center
