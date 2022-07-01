@@ -47,15 +47,22 @@ bindsym $mod+p exec flameshot gui
 bindsym $mod+b exec alacritty -t ranger-float -e ranger
 for_window [title="ranger-float"] floating enable, resize set 1024 520, move position center
 
+# start todo list floating
+bindsym $mod+t exec alacritty -t todo-float -e vim ~/todo
+for_window [title="todo-float"] floating_enable, resize set 1024 520, move position center
+
+# adjust brightness
+bindsym $mod+Ctrl+k exec xrandr --output eDP-1 --brightness 1.0
+bindsym $mod+Ctrl+j exec xrandr --output eDP-1 --brightness 0.4
+
 ################################################################################################
 ## sound-section - DO NOT EDIT if you wish to automatically upgrade Alsa -> Pulseaudio later! ##
 ################################################################################################
 
 exec --no-startup-id volumeicon
-#bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
+bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 exec --no-startup-id pulseaudio
 exec --no-startup-id pa-applet
-bindsym $mod+Ctrl+m exec pavucontrol
 
 ################################################################################################
 
