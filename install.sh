@@ -48,7 +48,7 @@ configure_shell() {
 }
 
 install_dotfiles() {
-    rsync -avr --exclude '.git' --exclude 'install.sh' . ~
+    rsync -avr --exclude '.git' --exclude 'install.sh' --exclude "installed" . ~
 }
 
 configure_system() {
