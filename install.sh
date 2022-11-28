@@ -20,12 +20,26 @@ pacman_args="--needed --noconfirm"
 install_system_packages() {
     sudo pacman -Syyu ${pacman_args}
 
+    echo ""
+    echo "########################"
+    echo "Attempting to uninstall:"
+    echo "${pacman_uninstall[@]}"
+    echo "########################"
+
     for i in ${pacman_uninstall[@]}; do
-            if [ ! sudo pacman -Q $i 2> /dev/null ]; then
+            if sudo pacman -Q $i 2> /dev/null; then
                     echo "$i installed, removing it"
                     sudo pacman -Rcn --noconfirm $i
+            else
+                    echo "$i not installed, skipping"
             fi
     done
+
+    echo ""
+    echo "########################"
+    echo "Attempting to install:"
+    echo "${pacman_packages[@]}"
+    echo "########################"
 
     sudo pacman -Sy ${pacman_args} ${pacman_packages[*]}
 
