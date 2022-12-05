@@ -11,3 +11,8 @@ fi
 # Key bindings
 # ------------
 source "/home/nelsmore/.fzf/shell/key-bindings.zsh"
+
+# Defaults
+# --------
+export FZF_DEFAULT_COMMAND='rg --files'
+export FZF_DEFAULT_OPS='-m --height 50% --border'

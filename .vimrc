@@ -93,6 +93,8 @@ let g:fzf_layout = { 'window': 'enew' }
 let g:fzf_layout = { 'down': '~15%' }
 let g:fzf_history_dir = '~/.local/share/fzf-history'
 
+nnoremap <silent> <C-f> :Files<CR>
+
 "
 " FZF colors
 "
