@@ -9,6 +9,7 @@ pacman_packages=(
     zathura gnome-calculator zsh
     unzip autorandr libreoffice diff-so-fancy
     repo alacritty pulseaudio xclip flameshot
+    manjaro-pipewire ncpamixer
 )
 
 pacman_uninstall=(
