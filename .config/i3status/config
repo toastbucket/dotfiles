@@ -41,6 +41,11 @@ disk "/home/nelsmore/projects" {
         format = " build: %avail "
 }
 
+wireless _first_ {
+        format_up = "W: %quality at %essid, %bitrate / %frequency"
+        format_down = "W: none"
+}
+
 ethernet _first_ {
 # if you use %speed, i3status requires root privileges
         format_up = " lan: %ip %speed "
