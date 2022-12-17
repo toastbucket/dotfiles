@@ -9,7 +9,11 @@ pacman_packages=(
     zathura gnome-calculator zsh
     unzip autorandr libreoffice diff-so-fancy
     repo alacritty pulseaudio xclip flameshot
-    manjaro-pipewire ncpamixer
+    manjaro-pipewire yay
+)
+
+aur_packages=(
+    ncpamixer
 )
 
 pacman_uninstall=(
@@ -37,13 +41,20 @@ install_system_packages() {
     done
 
     echo ""
-    echo "########################"
-    echo "Attempting to install:"
+    echo "######################################"
+    echo "Attempting to install pacman packages:"
     echo "${pacman_packages[@]}"
-    echo "########################"
+    echo "######################################"
 
     sudo pacman -Sy ${pacman_args} ${pacman_packages[*]}
 
+    echo ""
+    echo "###################################"
+    echo "Attempting to install AUR packages:"
+    echo "${aur_packages[@]}"
+    echo "###################################"
+
+    yay -S ${aur_packages[*]}
 
     if [ ! -d ~/.cargo ]; then
             curl https://sh.rustup.rs -sSf | sh
