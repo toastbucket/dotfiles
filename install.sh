@@ -17,7 +17,7 @@ aur_packages=(
 )
 
 pacman_uninstall=(
-    lightdm palemoon-bin vim
+    palemoon-bin vim
 )
 
 pacman_args="--needed --noconfirm"
@@ -80,7 +80,9 @@ install_dotfiles() {
 configure_system() {
     sudo systemctl enable docker
     sudo systemctl start docker
-    
+
+    sudo systemctl disable lightdm
+
     if ! grep -q docker /etc/group; then
         echo "docker group not found, adding it"
         sudo groupadd docker
