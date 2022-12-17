@@ -9,11 +9,11 @@ pacman_packages=(
     zathura gnome-calculator zsh
     unzip autorandr libreoffice diff-so-fancy
     repo alacritty pulseaudio xclip flameshot
-    manjaro-pipewire yay
+    manjaro-pipewire yay sway swayidle swaybg
 )
 
 aur_packages=(
-    ncpamixer
+    ncpamixer swaylock-effects
 )
 
 pacman_uninstall=(
