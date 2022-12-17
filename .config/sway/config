@@ -65,7 +65,9 @@ exec swayidle -w before-sleep '$do_lock'
 # Defaults
 #
 
-default_border pixel 1
+default_border none
+gaps inner 10
+for_window [app_id="Alacritty"] opacity 0.95
 
 ### Key bindings
 #
