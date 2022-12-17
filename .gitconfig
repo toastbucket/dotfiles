@@ -40,3 +40,5 @@
 	newNormal = "green"
 	newHighlight = "black green"
 
+[includeIf "gitdir:~/projects/pwc/"]
+	path = ".config/git/gitconfig-pwc"
