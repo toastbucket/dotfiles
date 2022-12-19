@@ -67,7 +67,9 @@ exec swayidle -w before-sleep '$do_lock'
 
 default_border none
 gaps inner 10
+
 for_window [app_id="Alacritty"] opacity 0.95
+for_window [app_id="should_float"] floating enable, opacity 0.95
 
 ### Key bindings
 #
@@ -92,6 +94,7 @@ for_window [app_id="Alacritty"] opacity 0.95
     # Reload the configuration file
     bindsym $mod+Shift+c reload
 
+    bindsym $mod+Ctrl+m exec alacritty --class 'should_float,should_float' -e 'ncpamixer'
     bindsym $mod+Tab exec $do_lock
 
     # Exit sway (logs you out of your Wayland session)
