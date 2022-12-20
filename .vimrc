@@ -2,7 +2,7 @@ set nocompatible
 set number
 set backspace=indent,eol,start
 set mouse=a
-set clipboard=unnamedplus,autoselectplus
+set clipboard+=unnamedplus
 set ttyfast
 set t_Co=256
 set completeopt=menuone
