@@ -97,6 +97,9 @@ for_window [app_id="should_float"] floating enable, opacity 0.95
     bindsym $mod+Ctrl+m exec alacritty --class 'should_float,should_float' -e 'ncpamixer'
     bindsym $mod+Tab exec $do_lock
 
+    bindsym XF86MonBrightnessUp exec light -A 10
+    bindsym XF86MonBrightnessDown exec light -U 10
+
     # Exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 

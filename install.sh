@@ -6,7 +6,7 @@ pacman_packages=(
     android-tools android-udev minicom
     openocd ctags ripgrep fd docker openssl
     wget curl git rofi gvim cmake ctags tig
-    zathura gnome-calculator zsh waybar
+    zathura gnome-calculator zsh waybar light
     unzip autorandr libreoffice diff-so-fancy
     repo alacritty pulseaudio xclip flameshot
     manjaro-pipewire yay sway swayidle swaybg
@@ -74,26 +74,43 @@ configure_shell() {
 }
 
 install_dotfiles() {
-    rsync -avr --exclude '.git' --exclude 'install.sh' --exclude "installed" . ~
+    rsync -avr --exclude '.git' --exclude 'install.sh' --exclude "installed" --exclude "files" . ~
+}
+
+install_files() {
+    sudo cp files/90-backlight.rules /etc/udev/rules.d/90-backlight.rules
+}
+
+check_and_add_group() {
+    local group=$1
+    local groups=$(groups)
+    local user_groups=$(groups ${USER})
+
+    if [[ ! "${user_groups}" == *"${group}"* ]];then
+        echo "not in docker group"
+        if [[ ! "${groups}" == *"docker"* ]];then
+            echo "docker group doesn't exist, fixing that."
+            sudo groupadd ${group}
+        fi
+        sudo usermod -aG $group ${USER}
+    fi
 }
 
 configure_system() {
     sudo systemctl enable docker
     sudo systemctl start docker
-
     sudo systemctl disable lightdm
 
-    if ! grep -q docker /etc/group; then
-        echo "docker group not found, adding it"
-        sudo groupadd docker
-        sudo usermod -aG docker ${USER}
-    fi
-    
-    if ! grep -q dialout /etc/group; then
-        echo "dialout group not found, adding it"
-        sudo groupadd dialout
-        sudo usermod -aG dialout ${USER}
-    fi
+    check_and_add_group "dialout"
+    check_and_add_group "docker"
+    check_and_add_group "video"
+    check_and_add_group "wheel"
+
+    install_files
+
+    sudo udevadm control --reload
+    sudo udevadm trigger
+
 }
 
 install_system_packages
