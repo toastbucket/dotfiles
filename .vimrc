@@ -133,6 +133,11 @@ let g:gruvbox_contrast_dark = 'soft'
 let g:gruvbox_transparent_bg = '1'
 
 "
+" termdebug options
+"
+let g:termdebug_wide = 1
+
+"
 " autocommands
 "
 au bufread,bufnewfile *.aidl set ft=java
@@ -179,6 +184,10 @@ if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
+"
+" Add packs
+"
+packadd! termdebug
 
 call plug#begin()
 
