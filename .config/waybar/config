@@ -32,12 +32,14 @@
     },
     "battery": {
         "bat": "BAT0",
+        "interval": 1,
         "states": {
             // "good": 95,
             "warning": 30,
             "critical": 15
         },
         "format": "{capacity}% {icon} ",
+        "format-charging": "{capacity}% ",
         "format-icons": ["", "", "", "", ""]
     },
     "network": {
