@@ -6,7 +6,7 @@ pacman_packages=(
     android-tools android-udev minicom
     openocd ctags ripgrep fd docker openssl
     wget curl git rofi gvim cmake ctags tig
-    zathura gnome-calculator zsh
+    zathura gnome-calculator zsh waybar
     unzip autorandr libreoffice diff-so-fancy
     repo alacritty pulseaudio xclip flameshot
     manjaro-pipewire yay sway swayidle swaybg
