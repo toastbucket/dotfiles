@@ -110,6 +110,7 @@ export PROMPT_COMMAND="pwd > /tmp/whereami"
 
 alias rerc='source ~/.zshrc'
 alias ccat='highlight -O ansi'
+alias vim='nvim'
 
 fg() {
     if [[ $# -eq 1 && $1 = - ]]; then
