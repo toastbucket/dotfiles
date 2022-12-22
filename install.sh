@@ -100,6 +100,8 @@ check_and_add_group() {
 configure_system() {
     sudo systemctl enable docker
     sudo systemctl start docker
+    sudo systemctl enable systemd-timesyncd
+    sudo systemctl start systemd-timesyncd
     sudo systemctl disable lightdm
 
     check_and_add_group "dialout"
