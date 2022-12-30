@@ -104,6 +104,8 @@ for_window [app_id="should_float"] floating enable, opacity 0.95
     bindsym XF86AudioLowerVolume exec amixer -q -D pulse sset Master 5%-
     bindsym XF86AudioMute exec amixer -q -D pulse sset Master toggle
 
+    bindsym $mod+p exec grim -g "$(slurp -d)" - | wl-copy -t image/png
+
     # Exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 

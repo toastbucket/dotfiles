@@ -10,7 +10,7 @@ pacman_packages=(
     unzip autorandr libreoffice diff-so-fancy
     repo alacritty pulseaudio xclip flameshot
     manjaro-pipewire yay sway swayidle swaybg
-    wl-clipboard
+    wl-clipboard wl-copy grim slurp
 )
 
 aur_packages=(
