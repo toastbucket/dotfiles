@@ -18,5 +18,5 @@ set show-changes = no
 #set main-view-commit-title-graph = v1
 
 # Copy SHA1 to clipboard
-bind generic 9 !sh -c "echo -n %(commit) | xclip -selection c && echo Copied %(commit) to clipboard"
+bind generic 9 !sh -c "echo -n %(commit) | wl-copy && echo Copied %(commit) to clipboard"
 
