@@ -28,9 +28,14 @@ set $menu fuzzel | xargs swaymsg exec --
 set $do_lock swaylock --clock --indicator --screenshots --effect-scale 0.4 --effect-vignette 0.2:0.5 --effect-blur 4x2 --datestr "%a %e.%m.%Y" --timestr "%k:%M"
 
 ### Output configuration
-#
+
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+
+# Output configuration (PWC)
+output HDMI-A-1 resolution 1920x1080 position 0,0
+output eDP-1 resolution 1920x1080 position 1920,0
+
 #
 # Example configuration:
 #
