@@ -8,8 +8,8 @@ pacman_packages=(
     wget curl git rofi gvim cmake ctags tig
     zathura gnome-calculator zsh waybar light
     unzip autorandr libreoffice diff-so-fancy
-    repo alacritty pulseaudio xclip flameshot
-    manjaro-pipewire yay sway swayidle swaybg
+    repo alacritty xclip flameshot
+    manjaro-pulse yay sway swayidle swaybg
     wl-clipboard wl-copy grim slurp
 )
 
